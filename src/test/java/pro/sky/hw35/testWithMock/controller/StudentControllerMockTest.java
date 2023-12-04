@@ -10,7 +10,6 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.mock.mockito.SpyBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import pro.sky.hw35.controller.StudentController;
 import pro.sky.hw35.model.Student;
@@ -20,13 +19,12 @@ import pro.sky.hw35.service.StudentService;
 import java.util.Optional;
 
 import static java.nio.file.Paths.get;
-import static org.hamcrest.Matchers.any;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest
-public class StudentMockTest {
+public class StudentControllerMockTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -42,7 +40,6 @@ public class StudentMockTest {
 
     @Test
     public void saveStudent_Test() throws Exception {
-
         final String name = "Anthony Martial";
         final int age = 25;
         final long id = 1;

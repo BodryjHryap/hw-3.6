@@ -22,7 +22,6 @@ public class StudentControllerTest {
 
     @Test
     void create_Test() throws Exception {
-
         Student student = new Student();
         student.setName("Tariq Lamptey");
         student.setAge(18);
