@@ -23,7 +23,6 @@ public class FacultyControllerTest {
 
     @Test
     void create_Test() throws Exception {
-
         Faculty faculty = new Faculty();
         faculty.setName("Leicester");
         faculty.setColor("pink");
